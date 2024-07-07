@@ -1,0 +1,152 @@
+
+*{
+  margin: 0;
+  padding:0;
+}
+
+.sectionone{
+ 
+  background-image: url('../../assets/images/wall.avif');
+  height:100vh;
+  width: 100vw;
+  position: relative;
+}
+ .logo{
+  
+  height: 300px;
+  width: 400px;
+ z-index: -1;
+  
+  
+ }
+ .imgi{
+  background-image: url('../../assets/images/school_logo.png');
+ height:250px;
+ width:300px;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+ background-position: center; 
+ 
+  
+}
+
+.upper-layer {
+  display: flex;
+  position: absolute;
+/* Setting the size of the upper layer to 80% of the screen size*/
+left:90px;
+top:70px;
+  height: 70vh;
+  width: 80vw;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+
+/*the alpha value controls the transparency*/
+  background: rgba( 255, 255, 255, 0.3 );
+
+/* This controls the blurring effect*/
+backdrop-filter: blur( 7.5px );
+  -webkit-backdrop-filter: blur( 7.5px );
+
+/*Adding the shadow*/
+box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+
+/* Adding our borders*/
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  z-index: 4;
+}
+
+li {
+  list-style: none;
+}
+header {
+  
+  position: absolute; 
+  top: -40px;
+  right: 20px;
+  left: 20px;
+  height:50px;
+  padding: 20px 20px;
+/* Responsive layout */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+/* Adding Glassmorphism effect to our navbar*/
+  background: rgba( 255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+  backdrop-filter: blur(50px);
+
+/* Adding our borders*/
+  border-radius: 20px;
+  border: 1px solid rgba( 255, 255, 255, 0.25 );
+  border-top: 1px solid rgba( 255, 255, 255, 0.5 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.5 );
+}
+/* Adding some styles to the header */
+
+header ul {
+  display: flex;
+}
+header ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+header ul li a {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.5em;
+  color: #000000;
+  padding: 8px 15px;
+}
+header ul li a:hover, .active{
+  border-radius: 30px;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.1 ) 
+}
+
+
+.content {
+  transform: translateX(-100px);
+/* Adding Glassmorphism effect to the body*/
+  background: rgba(13, 158, 174, 0.642);
+  backdrop-filter: blur(50px);
+
+
+  box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.18 );
+
+/*Setting the borders of the content*/
+  border-radius: 20px;
+  border: 1px solid rgba( 255, 255, 255, 0.25 );
+  border-top: 1px solid rgba( 255, 255, 255, 0.5 );
+  border-left: 1px solid rgba( 255, 255, 255, 0.5 );
+  height:300px;
+  
+  max-width: 700px;
+  padding: 55px;
+}
+.content h2 {
+  font-weight: 800;
+  font-size: 3em;
+  color: #ffff;
+}
+.content p {
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #f1eaea;
+}
+.content a {
+  display: inline-block;
+  padding: 15px 30px;
+  color: #ffff;
+  margin-top: 20px;
+  border-radius: 30px;
+  font-size: 1.5em;
+  font-weight: 500;
+  text-decoration: none;
+  background: #ffffff;
+  box-shadow: 0 5px 10px rgba( 0, 0, 0, 0.1 );
+}

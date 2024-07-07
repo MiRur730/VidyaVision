@@ -1,0 +1,39 @@
+
+
+.sect{
+  height:90vh;
+  width: 100vw;
+
+ }
+.container{
+  display: flex;
+ 
+  padding: 3rem;
+
+ 
+ }
+ .schoolfounder{
+  
+  margin: 4rem;
+ 
+  
+}
+.founderimage{
+  display: inline-block;
+height:400px;
+width:900px;
+  border-radius: 50%;
+}
+.text{
+  padding: 6rem;
+  font-family: "DM Serif Text", serif;
+font-weight: 500;
+font-style: normal;
+font-size: 2rem;
+
+}
+  
+
+
+
+ 

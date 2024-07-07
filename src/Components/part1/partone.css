@@ -1,0 +1,43 @@
+
+
+.sectiontwo{
+  box-sizing: border-box;
+  height: 90vh;
+  width: 100vw;
+padding-left:350px;
+
+padding-top:200px;
+
+  .tophai{
+    height:100vh;
+    width:100vw;
+    padding:0px;
+    margin: 0px;
+  }
+}
+.one{
+      
+  font-family: "Lora", serif;
+
+  font-weight: 100;
+  font-style: normal;
+  font-size: 8rem;
+ 
+  
+
+}
+.two{
+font-family: "DM Serif Text", serif;
+font-weight: 500;
+font-style: normal;
+font-size: 6rem;
+padding-left: 150px;
+
+}
+.three{
+font-family: "DM Serif Text", serif;
+letter-spacing: normal;
+padding-left: 120px;
+font-size: 1.4rem;
+color: rgba(0, 0, 0, 0.878);
+}
