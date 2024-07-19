@@ -1,0 +1,177 @@
+/* Base styles for the navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  min-height: 70px;
+  transition: opacity 0.5s ease;
+  z-index: 1000;
+  width:100%;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+}
+
+.nav-links-left,
+.nav-links-right {
+  display: flex;
+  width: 40%;
+}
+
+.nav-links-left {
+  justify-content: flex-end;
+}
+
+.nav-links-right {
+  justify-content: flex-start;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #a5d8ff;
+}
+
+.logoinnav {
+  background-image: url('../assets/images/school_logo.png');
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.nav-links a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #a5d8ff;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1200px) {
+  .nav-links-left,
+  .nav-links-right {
+    width: 45%;
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar{
+
+  }
+  .nav-links-left,
+  .nav-links-right {
+    width: 48%;
+  }
+.logoinnav{
+  background-position: right;
+}
+  
+
+ 
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 0.5rem;
+    height: auto;
+    min-height: 50px;
+  }
+  .nav-links {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    position: static;
+    transform: none;
+    left: auto;
+  }
+  .nav-links-left,
+  .nav-links-right {
+    width: auto;
+    justify-content: center;
+  }
+  .nav-links li {
+    margin: 0.25rem 0.5rem;
+  }
+  .logoinnav{
+    background-position: right;
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.25rem;
+    min-height: 50px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+  }
+  .nav-links a {
+    font-size: 0.9rem;
+  }
+  .logoinnav{
+    background-position: right;
+  }
+  
+}
+
+@media (max-width: 360px) {
+  .nav-links li {
+    margin: 0.15rem 0.25rem;
+  }
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+  .logoinnav{
+    background-position: right;
+  }
+}
+
+

@@ -1,0 +1,156 @@
+.contactsection {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(); // Add your background image URL if needed
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 0; // Adjust as necessary
+}
+
+.contact-page {
+  position: absolute;
+  height: 80vh;
+  width: 80vw;
+  margin-top: 200px;
+  background-color: #DF0030;
+  margin-left: 5%;
+  padding: 1rem;
+
+  p {
+    color: rgba(0, 0, 0, 0.878);
+    font-family: "DM Serif Text", serif;
+    letter-spacing: normal;
+    font-size: 1.4rem;
+    margin: 20px 0;
+  }
+}
+
+.contactheading {
+  margin: 3rem 0;
+  font-family: "DM Serif Text", serif;
+  font-weight: 500;
+  font-size: 6rem;
+  color: #000;
+  padding-left: 0;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2.5rem;
+  }
+}
+
+.map-wrap {
+  background: rgb(181, 163, 163);
+  width: 100%;
+  height: 400px;
+  margin-top: 2rem;
+
+  .leaflet-container {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    animation: none; // Adjust or remove if not needed
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
+
+  @media (max-width: 480px) {
+    height: 200px;
+  }
+}
+
+.info-map {
+  position: absolute;
+  background: #00dfdf;
+  top: 50px;
+  right: 5%;
+  border-radius: 15%;
+  z-index: 99;
+  width: 80%;
+  max-width: 300px;
+  padding: 20px;
+  color: #fff;
+  font-family: 'Helvetica';
+  font-size: 15px;
+  font-weight: 200;
+  opacity: 1;
+  animation: none; // Adjust or remove if not needed
+
+  span {
+    font-size: 12px;
+
+    span {
+      color: #6100df;
+    }
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    right: 2%;
+    width: 90%;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+    right: 0;
+    width: 100%;
+  }
+}
+
+.extra {
+  background-color: #000;
+  height: 120px;
+  width: 100vw;
+  z-index: 99;
+}
+
+.flat-button {
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  font-family: sans-serif;
+  text-decoration: none;
+  padding: 10px 18px;
+  border: 1px solid white;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
+  width: fit-content;
+  margin: 20px auto; // Center the button
+
+  &:hover {
+    background: #ffd700;
+    color: #333;
+    border: 1px solid #ffd700;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .map-wrap {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .info-map {
+    display: none;
+  }
+}

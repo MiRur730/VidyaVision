@@ -1,0 +1,75 @@
+.sect {
+  height: auto; /* Changed from 90vh to auto for better responsiveness */
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 2rem; /* Added padding for better spacing */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically on small screens */
+  align-items: center; /* Center content horizontally */
+  padding: 1rem; /* Reduced padding for smaller screens */
+  text-align: center; /* Center text for better alignment */
+}
+
+.schoolfounder {
+  margin-bottom: 2rem; /* Added bottom margin for spacing on small screens */
+}
+
+.founderimage {
+  display: block; /* Ensure the image is block-level for better responsiveness */
+  height: auto; /* Set height to auto for proportional scaling */
+  width: 80%; /* Use percentage for responsive width */
+  max-width: 500px; /* Set a max-width to prevent image from getting too large */
+  border-radius: 50%;
+}
+
+.text {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem; /* Set a default font size */
+  padding: 1rem; /* Adjust padding for better spacing */
+}
+
+.text h1 {
+  font-size: 1.5rem; /* Adjust font size for headers */
+  margin-bottom: 1rem; /* Added bottom margin for spacing */
+}
+
+.text p {
+  font-size: 1rem; /* Set font size for paragraphs */
+  margin: 0.5rem 0; /* Adjust margin for better spacing */
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Switch to row layout on larger screens */
+    justify-content: center; /* Center items horizontally */
+  }
+
+  .schoolfounder {
+    margin-right: 2rem; /* Add margin to the right of the image */
+  }
+
+  .text {
+    font-size: 1.2rem; /* Increase font size for larger screens */
+    padding: 2rem; /* Adjust padding for larger screens */
+  }
+
+  .text h1 {
+    font-size: 2rem; /* Increase header font size */
+  }
+
+  .text p {
+    font-size: 1.2rem; /* Increase paragraph font size */
+  }
+}
+
+@media (min-width: 1024px) {
+  .founderimage {
+    width: 60%; /* Adjust width for larger screens */
+    max-width: 600px; /* Increase max-width */
+  }
+}

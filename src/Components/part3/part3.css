@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=LXGW+WenKai+Mono+TC&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+AU+VIC:wght@100..400&family=Playwrite+ES:wght@100..400&family=Playwrite+US+Trad:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap');
+
+.noverflow {
+  width: 100%;
+  padding: 0;
+  margin-top: 100px;
+}
+
+.section-heading {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+  font-family: "Lora", serif;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+.section-3 {
+  margin-top: 300px;
+  background-color: rgba(0, 0, 0, 0.899);
+  padding: 2rem 0;
+  width: 90%;
+  margin: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 3rem;
+}
+
+.food-img {
+  width: 24vw;
+  height: 30vh;
+  object-fit: cover;
+  box-shadow: 0.3rem 0.3rem 0.1rem #e92929, 0.5rem 0.5rem 0.1rem #a2e946, 0.7rem 0.7rem 0.1rem #297ce9, 0.9rem 0.9rem 0.1rem #e92999;
+}
+
+.gallery-link:hover .food-img {
+  box-shadow: 1rem 1rem 0.1rem #e92929, 2rem 2rem 0.1rem #a2e946, 3rem 3rem 0.1rem #297ce9, 4rem 4rem 0.1rem #e92999;
+  transition: all 0.5s;
+  filter: blur(0.5rem);
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+
+.gallery-link {
+  position: relative;
+  margin: 4rem 1rem;
+}
+
+.gallery-link::before {
+  content: "";
+  top: 2vw;
+  left: 80%;
+  position: absolute;
+  width: 0.2rem;
+  height: 0;
+  background-color: #fff;
+  transition: height 0.5s;
+  z-index: 10;
+}
+
+.gallery-link::after {
+  content: "";
+  top: 30%;
+  left: 2rem;
+  position: absolute;
+  width: 0;
+  height: 0.2rem;
+  background-color: #fff;
+  transition: width 0.5s;
+}
+
+.gallery-link:hover::before {
+  height: 80%;
+}
+
+.gallery-link:hover::after {
+  width: 90%;
+}
+
+.food-name {
+  position: absolute;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  top: 1rem;
+  left: 3rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.7rem;
+  color: #430404;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.food-description {
+  position: absolute;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  top: 5rem;
+  bottom: 2vw;
+  left: 2rem;
+  width: 70%;
+  font-size: 0.7rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: black;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.gallery-link:hover .food-name {
+  width: 100%;
+  transition: width 1.5s 0.5s;
+}
+
+.gallery-link:hover .food-description {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s 1s;
+}
+
+@media (max-width: 1200px) {
+  .section-heading {
+    font-size: 3rem;
+  }
+
+  .gallery-link {
+    width: 40rem;
+    height: 25rem;
+    margin: 5rem 2rem;
+  }
+
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .section-heading {
+    font-size: 2.5rem;
+    margin: 0 2rem;
+  }
+
+  .gallery-link {
+    width: 30rem;
+    height: 20rem;
+    margin: 4rem 1rem;
+  }
+
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-heading {
+    font-size: 2rem;
+    margin: 0 1rem;
+  }
+
+  .gallery-link {
+    width: 25rem;
+    height: 18rem;
+    margin: 3rem 1rem;
+  }
+
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .food-name {
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .food-description {
+    top: 4rem;
+    left: 1rem;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-heading {
+    font-size: 1.8rem;
+    margin: 0.5rem;
+  }
+
+  .gallery-link {
+    width: 20rem;
+    height: 15rem;
+    margin: 2rem 1rem;
+  }
+
+  .food-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .food-name {
+    top: 0.5rem;
+    left: 1rem;
+    font-size: 0.7rem;
+  }
+
+  .food-description {
+    top: 3rem;
+    left: 1rem;
+    font-size: 0.5rem;
+  }
+}
